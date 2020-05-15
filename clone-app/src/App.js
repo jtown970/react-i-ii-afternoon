@@ -11,9 +11,8 @@ class  App extends Component {
 
     this.state = {
       person: [],
-      page: 1
+      page: data.id
     }
-    this.handlePageCount = this.handlePageCount.bind(this)
   }
 
   componentDidMount(){
@@ -22,11 +21,21 @@ class  App extends Component {
     })
   }
 
-  handlePageCount(){
+  nextPage = () => {
+    const newIndex = this.state.person.id+1
     this.setState({
-      page: this.state.page + 1
+      page: data.id
     })
   }
+
+  prevPage = () => {
+    const newIndex = this.state.person.id-1
+    this.setState({
+      page: data.id
+    })
+  }
+
+
 
   
 
@@ -44,6 +53,8 @@ class  App extends Component {
         </div>
         {person}
         <Nav/>
+        <button onClick={() => this.prevPage()} disabled={data.id === 1} >Prev</button>
+        <button onClick={() => this.nextPage()} disabled={data.length-1} >Next</button>
       </div>
     );
   }
