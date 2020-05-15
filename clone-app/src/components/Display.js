@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import data from '../data'
+import React from 'react'
+// import data from '../data'
 
 export default function Display(props)  {
-  console.log(props)
+  // console.log(props.ppl)
   return (
     
       <div className='center-box'>

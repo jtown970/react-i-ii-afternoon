@@ -21,19 +21,19 @@ class  App extends Component {
     })
   }
 
-  nextPage = () => {
-    const newIndex = this.state.person.id+1
-    this.setState({
-      page: data.id
-    })
-  }
+  // nextPage = () => {
+  //   const newIndex = this.state.person.id+1
+  //   this.setState({
+  //     page: data.id
+  //   })
+  // }
 
-  prevPage = () => {
-    const newIndex = this.state.person.id-1
-    this.setState({
-      page: data.id
-    })
-  }
+  // prevPage = () => {
+  //   const newIndex = this.state.person.id-1
+  //   this.setState({
+  //     page: data.id
+  //   })
+  // }
 
 
 
@@ -42,16 +42,28 @@ class  App extends Component {
 
   render(){
 
-    const person = this.state.person.map(elem => {
-        return <Display key={elem.id} ppl={elem}/>
+    const people = this.state.person.map(elem => {
+      // console.log(elem)
+      // for (let key in elem){
+        if(elem.id === 1){
+          return <Display key={elem.id} ppl={elem}/>
+        // }
+      } 
+      
     })
+
+    // const onePerson = this.state.person.forEach(elem => {
+    //   console.log(elem)
+    //   return <Display key={elem.id} ppl={elem}/>
+    // })
 
     return (
       <div>
         <div className='header'>
         <div className='home-text'>Home</div>
         </div>
-        {person}
+        {people}
+        {/* {onePerson} */}
         <Nav/>
         <button onClick={() => this.prevPage()} disabled={data.id === 1} >Prev</button>
         <button onClick={() => this.nextPage()} disabled={data.length-1} >Next</button>
