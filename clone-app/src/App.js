@@ -11,8 +11,9 @@ class  App extends Component {
 
     this.state = {
       person: [],
+      page: 1
     }
-    
+    this.handlePageCount = this.handlePageCount.bind(this)
   }
 
   componentDidMount(){
@@ -20,18 +21,25 @@ class  App extends Component {
       person: data
     })
   }
+
+  handlePageCount(){
+    this.setState({
+      page: this.state.page + 1
+    })
+  }
+
   
 
 
   render(){
+
     const person = this.state.person.map(elem => {
-      
         return <Display key={elem.id} ppl={elem}/>
-      
     })
+
     return (
       <div>
-                <div className='header'>
+        <div className='header'>
         <div className='home-text'>Home</div>
         </div>
         {person}

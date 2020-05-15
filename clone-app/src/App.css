@@ -53,3 +53,68 @@ body {
   padding: 5px 15px;
   border-radius: 10px;
 }
+
+.info-box {
+  height: 90%;
+  width: 60%;
+  margin: 5% ;
+}
+
+.page-count {
+ display: flex;
+ justify-content: flex-end;
+ margin-right: 2%;
+}
+
+.counter {
+  font-weight: bold;
+}
+
+.name {
+  display: flex;
+  flex-flow: row wrap;
+  width: 45%;
+  border-bottom: 1px solid aqua;
+  margin-bottom: 5%;
+  
+}
+
+.first-name, .last-name  {
+  margin-left: 2%;
+  font-weight: bold;
+  font-size: large;
+}
+
+.title, .location {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 2%;
+}
+
+.info {
+  margin-left: 10px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
