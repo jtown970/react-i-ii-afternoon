@@ -8,7 +8,7 @@ export default function Display(props)  {
       <div className='center-box'>
         <div className='box'>
             <div className='page-count'>
-              <p className='counter'>1/25</p> 
+              <p className='counter'>{props.ppl.id}/25</p> 
             </div>
           <div className='info-box'>
 
