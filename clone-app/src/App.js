@@ -26,7 +26,7 @@ class  App extends Component {
   render(){
     const person = this.state.person.map(elem => {
       
-        return <Display ppl={elem}/>
+        return <Display key={elem.id} ppl={elem}/>
       
     })
     return (
